@@ -30,6 +30,7 @@ func main() {
         api.POST("/getList", function.Get_list)
         api.POST("/getVideo", function.Get_video)
         api.POST("/upLoad", function.Upload)
+        api.POST("/delete",function.Delete_video)
     }
 
     

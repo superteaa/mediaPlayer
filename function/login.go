@@ -58,7 +58,7 @@ func Login(c *gin.Context) {
 
 		login_ch := make(chan string)
 
-		dojwt.Generate_token(username, password, email, login_ch)
+		go dojwt.Generate_token(username, password, email, login_ch)
 
 		token := <-login_ch
 

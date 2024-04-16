@@ -21,6 +21,15 @@ func init() {
         DialTimeout:  time.Second * 5,  // 连接建立的超时时间，这里设置为5秒
     })
 
+    //     Client = redis.NewClient(&redis.Options{
+    //     Addr: "localhost:6379", // Redis服务器地址
+    //     Password: "Tencent6666",           // 密码，如果没有则留空
+    //     DB: 0,                  // 数据库编号，默认为0
+    //     ReadTimeout:  time.Second * 3,  // 读取操作的超时时间，这里设置为3秒
+    //     WriteTimeout: time.Second * 3,  // 写入操作的超时时间，这里设置为3秒
+    //     DialTimeout:  time.Second * 5,  // 连接建立的超时时间，这里设置为5秒
+    // })
+
     // 检查连接
     pong, err := Client.Ping(context.Background()).Result()
     if err != nil {
